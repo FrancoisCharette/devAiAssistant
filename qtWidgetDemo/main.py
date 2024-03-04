@@ -8,12 +8,11 @@ import sys
 
 sys.path.append('.')
 
-class myApp(QWidget):
+class myApp(QWidget, Ui_widgetDemo):
 
   def __init__(self):
-    QWidget.__init__(self)
-    self.ui = Ui_widgetDemo
-    self.ui.setupUi(self)
+    super().__init__()
+    self.setupUi(self)
 
 
 if __name__ == "__main__":
